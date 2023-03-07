@@ -1,10 +1,12 @@
 import { Navbar, NavbarLink } from "../components/Navbar.tsx";
+import Header from "../components/Header.tsx";
 
 export function ServerCodePage(
   props: { serverCode: number; codeDescription: string },
 ) {
   return (
     <>
+      <Header title="Not found!" />
       <Navbar>
         <NavbarLink title="Home" target="/" />
       </Navbar>

@@ -6,7 +6,7 @@ import { site } from "../data/site.ts";
 export default function App({ Component }: AppProps) {
   return (
     <>
-      <div class="p-4 mx-auto max-w-screen-md rounded-xl bg-white my-4 dark:bg-gray-800 dark:text-gray-50">
+      <div class="p-4 mx-auto max-w-screen-md bg-white dark:bg-gray-800 dark:text-gray-50">
         <Component />
         <Footer />
       </div>

@@ -30,12 +30,9 @@ export default function BlogViewPage(props: PageProps) {
           <NavbarCrumb />
           <NavbarLink title={post.slug} />
         </Navbar>
-        <style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
-        <article className="markdown-body rounded-xl m-2 p-1">
+        <article className="prose prose-slate dark:prose-white mx-auto">
           <h1>{post.title}</h1>
-          {post.image
-            ? <img class="pb-1 object-contain" src={post.image} />
-            : <></>}
+          {post.image ? <img class="object-contain" src={post.image} /> : <></>}
           <small>Published on {post.date.toLocaleDateString("en-US")}</small>
           <span
             dangerouslySetInnerHTML={{ __html: gfm.render(post.content) }}
@@ -45,12 +42,10 @@ export default function BlogViewPage(props: PageProps) {
     )
     : (
       <>
-        <div class="p-4 mx-auto max-w-screen-md">
-          <ServerCodePage
-            serverCode={404}
-            codeDescription={"We couldn't find the post you're looking for."}
-          />
-        </div>
+        <ServerCodePage
+          serverCode={404}
+          codeDescription={"We couldn't find the post you're looking for."}
+        />
       </>
     );
 }

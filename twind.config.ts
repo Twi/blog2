@@ -1,32 +1,19 @@
-import { Options } from "$fresh/plugins/twind.ts";
-import * as colors from "twind/colors";
+import { defineConfig } from "@twind/core";
+import presetAutoprefix from "@twind/preset-autoprefix";
+import presetTailwind from "@twind/preset-tailwind";
+import presetTypography from "@twind/preset-typography";
 
-export default {
-  selfURL: import.meta.url,
-  setup: {
-    theme: {
-      listStyleType: {
-        none: "disc",
-        disc: "disc",
-      },
-      colors: {
-        yellow: colors.yellow,
-        transparent: "transparent",
-        "black": "black",
-        "white": "white",
-        "gray": {
-          50: "#faf9f8",
-          100: "#f6f4f2",
-          200: "#E6E4E2",
-          300: "#D6D2CC",
-          400: "#B6B0AD",
-          500: "#9F9995",
-          600: "#666361",
-          700: "#474645",
-          800: "#343433",
-          900: "#242424",
-        },
-      },
-    },
-  },
-} as Options;
+// Twind v1 configuration
+// Learn more at https://twind.style/installation
+export default defineConfig({
+  presets: [
+    presetAutoprefix(),
+    presetTailwind(),
+    presetTypography({ extend: { "margin-bottom": "2rem" } }),
+  ],
+  theme: {},
+});
+
+// Make sure you export your config's URL
+// so that it can referenced in islands
+export const configURL = import.meta.url;

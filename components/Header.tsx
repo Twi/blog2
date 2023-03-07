@@ -15,11 +15,6 @@ figure a::after{
   color: #fff;
 }
 
-body {
-  background-color: #E6E4E2; // bg-gray-200
-  color: rgb(248 250 252); // text-slate-50
-}
-
 article ul {
   list-style-type: disc; // list-disc
   margin-left: 2rem; // ml-8
