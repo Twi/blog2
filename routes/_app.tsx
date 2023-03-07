@@ -7,10 +7,8 @@ export default function App({ Component }: AppProps) {
   return (
     <>
       <div class="bg-gray-50 dark:bg-gray-800 dark:text-gray-50">
-        <div class="p-4 mx-auto max-w-screen-md dark:bg-gray-800 dark:text-gray-50 h-screen flex flex-col">
-          <div class="flex-grow">
-            <Component />
-          </div>
+        <div class="p-4 mx-auto max-w-screen-md">
+          <Component />
           <Footer />
         </div>
       </div>
