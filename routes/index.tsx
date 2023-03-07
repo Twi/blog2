@@ -12,7 +12,7 @@ export default function Home() {
       <h1 class="whitespace-nowrap text-3xl font-bold text-gray-800 dark:text-gray-400 mb-4">
         Twilight Sparkle's Friendship Castle
       </h1>
-      <img class="mb-4" src="/images/landscape.jpg" />
+      <img class="mb-4 rounded-xl" src="/images/landscape.jpg" />
       <section>
         <h2 class="text-2xl font-bold mb-4">Welcome</h2>
 
