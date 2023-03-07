@@ -22,7 +22,7 @@ export default function BlogViewPage(props: PageProps) {
   return post
     ? (
       <>
-        <Header title={post.title} description={post.desc} />
+        <Header title={post.title} description={post.desc} image={post.image} />
         <Navbar>
           <NavbarLink title="Home" target="/" />
           <NavbarCrumb />
