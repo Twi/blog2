@@ -31,7 +31,7 @@ export default function BlogViewPage(props: PageProps) {
           <NavbarLink title={post.slug} />
         </Navbar>
         <style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
-        <article className="markdown-body">
+        <article className="markdown-body rounded-xl m-2 p-1">
           <h1>{post.title}</h1>
           {post.image
             ? <img class="pb-1 object-contain" src={post.image} />

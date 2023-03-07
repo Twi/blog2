@@ -8,7 +8,17 @@ const CSS =
 
 figure a::after{
     content: \"\" !important
-}`;
+}
+
+::selection {
+  background-color: #000;
+  color: #fff;
+}
+
+body {
+  background: #E6E4E2; // bg-gray-200
+}
+`;
 
 export interface HeaderProps {
   title?: string;
