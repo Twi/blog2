@@ -26,8 +26,6 @@ export default function BlogIndex(props: PageProps<Data>) {
         <NavbarCrumb />
         <NavbarLink title="Blog" />
       </Navbar>
-      <nav class="bg-gray-800">
-      </nav>
       <h1 class="whitespace-nowrap text-3xl font-bold text-gray-800 dark:text-gray-400 mb-4">
         Blog
       </h1>

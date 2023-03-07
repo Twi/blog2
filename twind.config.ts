@@ -9,7 +9,6 @@ export default {
         none: "disc",
         disc: "disc",
       },
-      darkMode: "class",
       colors: {
         yellow: colors.yellow,
         transparent: "transparent",
