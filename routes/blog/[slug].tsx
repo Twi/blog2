@@ -2,7 +2,6 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { loadPost, Post } from "../../utils/post.ts";
 import { ServerCodePage } from "../_404.tsx";
 import { Navbar, NavbarCrumb, NavbarLink } from "../../components/Navbar.tsx";
-import * as gfm from "$gfm";
 import Header from "../../components/Header.tsx";
 import render from "../../utils/markdown.ts";
 
