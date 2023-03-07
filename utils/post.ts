@@ -5,7 +5,8 @@ export interface Post {
   title: string;
   date: Date;
   content: string;
-  image: string;
+  image?: string;
+  desc?: string;
 }
 
 export async function loadPost(slug: string): Promise<Post | null> {

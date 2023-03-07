@@ -33,7 +33,7 @@ export default function BlogIndex(props: PageProps<Data>) {
       </h1>
       <ul>
         {posts.map((post) => (
-          <li class="list-disc">
+          <li class="list-disc ml-8">
             {post.date.toLocaleDateString("en-US", {
               year: "numeric",
               month: "2-digit",
