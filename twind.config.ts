@@ -9,7 +9,7 @@ export default defineConfig({
   presets: [
     presetAutoprefix(),
     presetTailwind(),
-    presetTypography({ extend: { "margin-bottom": "2rem" } }),
+    presetTypography(),
   ],
   theme: {},
 });

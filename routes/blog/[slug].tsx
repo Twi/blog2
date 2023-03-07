@@ -4,6 +4,7 @@ import { ServerCodePage } from "../_404.tsx";
 import { Navbar, NavbarCrumb, NavbarLink } from "../../components/Navbar.tsx";
 import * as gfm from "$gfm";
 import Header from "../../components/Header.tsx";
+import render from "../../utils/markdown.ts";
 
 interface Data {
   post: Post | null;
@@ -30,12 +31,12 @@ export default function BlogViewPage(props: PageProps) {
           <NavbarCrumb />
           <NavbarLink title={post.slug} />
         </Navbar>
-        <article className="prose prose-slate dark:prose-white mx-auto">
+        <article className="prose prose-slate dark:prose-invert prose-img:rounded-xl max-w-none">
           <h1>{post.title}</h1>
           {post.image ? <img class="object-contain" src={post.image} /> : <></>}
           <small>Published on {post.date.toLocaleDateString("en-US")}</small>
           <span
-            dangerouslySetInnerHTML={{ __html: gfm.render(post.content) }}
+            dangerouslySetInnerHTML={{ __html: render(post.content) }}
           />
         </article>
       </>

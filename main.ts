@@ -10,6 +10,9 @@ import manifest from "./fresh.gen.ts";
 import freshwind from "@freshwind";
 import config, { configURL } from "./twind.config.ts";
 
+import * as comrak from "@comrak";
+await comrak.init();
+
 await start(manifest, {
   plugins: [freshwind(config, configURL)],
 });

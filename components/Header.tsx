@@ -1,37 +1,10 @@
 import { Head } from "$fresh/runtime.ts";
 import { site } from "../data/site.ts";
 
-const CSS =
-  `article a[href^=\"https\"]:where(:not([href*=\"twilightsparkle.fly.dev/\"]))::after{
-    content: "\︎↗\"
-}
-
-figure a::after{
-    content: \"\" !important
-}
-
-::selection {
+const CSS = `::selection {
   background-color: #000;
   color: #fff;
-}
-
-article ul {
-  list-style-type: disc; // list-disc
-  margin-left: 2rem; // ml-8
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #343433; // bg-gray-800
-    color: rgb(15 23 42); // text-slate-900
-  }
-
-  article .markdown-body {
-    background-color: #343433; // bg-gray-800
-    color: rgb(15 23 42); // text-slate-900
-  }
-}
-`;
+}`;
 
 export interface HeaderProps {
   title?: string;
