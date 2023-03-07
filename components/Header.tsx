@@ -1,21 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
-import { site } from "../data/site.ts";
-
-const CSS = `::selection {
-  background-color: #000;
-  color: #fff;
-}
-
-body {
-  background-color: rgb(249 250 251);
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: rgb(31 41 55);
-  }
-}
-`;
+import { site } from "@/data/site.ts";
 
 export interface HeaderProps {
   title?: string;
@@ -35,10 +19,6 @@ export default function Header(props: HeaderProps) {
       <meta name="description" content={desc} />
       {/* Theme */}
       <meta name="theme-color" content="#000" />
-      {/* Global Styles that couldn't be loaded through Twind */}
-      <style>
-        {CSS}
-      </style>
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />

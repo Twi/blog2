@@ -1,4 +1,5 @@
 import { extract } from "std/encoding/front_matter/any.ts";
+import TTL from "$ttl";
 
 export interface Post {
   slug: string;
@@ -9,7 +10,23 @@ export interface Post {
   desc?: string;
 }
 
+const ttl = new TTL<Post>(
+  Deno.env.get("NODE_ENV") == "production" ? 10_000_000 : 10_000,
+);
+
+ttl.addEventListener("set", ({ key }: { key: string }) => {
+  console.log(`[cache] set ${key}`);
+});
+ttl.addEventListener("expired", ({ key }: { key: string }) => {
+  console.log(`[cache] expired ${key}`);
+});
+
 export async function loadPost(slug: string): Promise<Post | null> {
+  if (ttl.has(slug)) {
+    const post = ttl.get(slug);
+    return post ? post : null;
+  }
+
   let text: string;
   try {
     text = await Deno.readTextFile(
@@ -24,13 +41,15 @@ export async function loadPost(slug: string): Promise<Post | null> {
   const { attrs, body } = extract(text);
   const params = attrs as Record<string, string>;
   const date = new Date(params.date);
-  return {
+  const result = {
     slug,
     title: params.title,
     date,
     content: body,
     image: params.image,
   };
+  ttl.set(slug, result);
+  return result;
 }
 
 export async function listPosts(): Promise<Post[]> {

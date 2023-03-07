@@ -1,5 +1,5 @@
-import { Container } from "./Container.tsx";
-import { site } from "../data/site.ts";
+import { Container } from "@/components/Container.tsx";
+import { site } from "@/data/site.ts";
 export function Footer() {
   return (
     <footer class="w-full pt-10 pb-4">

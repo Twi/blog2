@@ -12,5 +12,6 @@ USER deno
 ADD . .
 # Compile the main app so that it doesn't need to be compiled each startup/entry.
 RUN deno cache --reload --lock=deno.lock main.ts
+ENV NODE_ENV=production
 
 CMD ["run", "--allow-all", "main.ts"]

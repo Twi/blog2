@@ -9,19 +9,17 @@ export default function Home() {
         <NavbarLink title="Home" />
         <NavbarLink title="Blog" target="/blog" />
       </Navbar>
-      <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-400 mb-4">
-        Twilight Sparkle's Friendship Castle
-      </h1>
-      <img class="mb-4 rounded-xl" src="/images/landscape.jpg" />
-      <section>
-        <h2 class="text-2xl font-bold mb-4">Welcome</h2>
+      <section class="prose prose-slate dark:prose-invert max-w-none">
+        <h1>Twilight Sparkle's Friendship Castle</h1>
+        <img class="rounded-xl" src="/images/landscape.jpg" />
+        <h2 class="font-bold">Welcome</h2>
 
-        <p class="mb-4">
+        <p>
           Hi everypony! Welcome to Twilight Sparkle's Friendship Castle! We're
           going to have so much fun learning fun things about such fun topics!
         </p>
 
-        <p class="mb-4">
+        <p>
           This is my hot take zone. Reader discretion advised. Before commenting
           on one of these articles, take a moment to consider if you're being an
           asshat because I won't read asshat comments.

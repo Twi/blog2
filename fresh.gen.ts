@@ -10,7 +10,10 @@ import * as $3 from "./routes/blog/[slug].tsx";
 import * as $4 from "./routes/blog/_middleware.ts";
 import * as $5 from "./routes/blog/index.tsx";
 import * as $6 from "./routes/index.tsx";
-import * as $$0 from "./islands/Counter.tsx";
+import * as $$0 from "./islands/Button.tsx";
+import * as $$1 from "./islands/Counter.tsx";
+import * as $$2 from "./islands/Input.tsx";
+import * as $$3 from "./islands/MastodonShare.tsx";
 
 const manifest = {
   routes: {
@@ -23,7 +26,10 @@ const manifest = {
     "./routes/index.tsx": $6,
   },
   islands: {
-    "./islands/Counter.tsx": $$0,
+    "./islands/Button.tsx": $$0,
+    "./islands/Counter.tsx": $$1,
+    "./islands/Input.tsx": $$2,
+    "./islands/MastodonShare.tsx": $$3,
   },
   baseUrl: import.meta.url,
   config,

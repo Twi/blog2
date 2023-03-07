@@ -5,3 +5,8 @@ export const site = {
   copyrightName: "Twilight Sparkle",
   viewSourceURL: "https://github.com/Twi/blog2",
 };
+
+export const author = {
+  mastodon: "@twi@tech.lgbt",
+  email: "twipony.ts@gmail.com",
+};
