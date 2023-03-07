@@ -9,7 +9,7 @@ export default function Home() {
         <NavbarLink title="Home" />
         <NavbarLink title="Blog" target="/blog" />
       </Navbar>
-      <h1 class="whitespace-nowrap text-3xl font-bold text-gray-800 dark:text-gray-400 mb-4">
+      <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-400 mb-4">
         Twilight Sparkle's Friendship Castle
       </h1>
       <img class="mb-4 rounded-xl" src="/images/landscape.jpg" />

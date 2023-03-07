@@ -4,7 +4,18 @@ import { site } from "../data/site.ts";
 const CSS = `::selection {
   background-color: #000;
   color: #fff;
-}`;
+}
+
+body {
+  background-color: rgb(249 250 251);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(31 41 55);
+  }
+}
+`;
 
 export interface HeaderProps {
   title?: string;
