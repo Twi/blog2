@@ -5,6 +5,10 @@ kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
 
+[mounts]
+source="fresh_data"
+destination="/home/deno/.cache"
+
 [env]
 
 [experimental]
