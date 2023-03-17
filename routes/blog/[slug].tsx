@@ -32,15 +32,24 @@ export default function BlogViewPage(props: PageProps) {
           <NavbarCrumb />
           <NavbarLink title={post.slug} />
         </Navbar>
-        <article className="prose prose-slate dark:prose-invert prose-img:rounded-xl">
-          <h1>{post.title}</h1>
+        <article>
+          <div className="prose prose-slate dark:prose-invert prose-img:rounded-xl">
+            <h1>{post.title}</h1>
+          </div>
           {post.image
-            ? <img class="object-contain" src={asset(post.image)} />
+            ? (
+              <img
+                class="my-4 object-contain rounded-xl"
+                src={asset(post.image)}
+              />
+            )
             : <></>}
-          <small>Published on {post.date.toLocaleDateString("en-US")}</small>
-          <span
-            dangerouslySetInnerHTML={{ __html: render(post.content) }}
-          />
+          <div className="prose prose-slate dark:prose-invert prose-img:rounded-xl">
+            <small>Published on {post.date.toLocaleDateString("en-US")}</small>
+            <span
+              dangerouslySetInnerHTML={{ __html: render(post.content) }}
+            />
+          </div>
         </article>
         <MastodonShare title={post.title} />
       </>
