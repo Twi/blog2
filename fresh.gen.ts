@@ -5,11 +5,14 @@
 import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/_404.tsx";
 import * as $1 from "./routes/_app.tsx";
-import * as $2 from "./routes/api/joke.ts";
-import * as $3 from "./routes/blog/[slug].tsx";
-import * as $4 from "./routes/blog/_middleware.ts";
-import * as $5 from "./routes/blog/index.tsx";
-import * as $6 from "./routes/index.tsx";
+import * as $2 from "./routes/api/gpt/decode.ts";
+import * as $3 from "./routes/api/gpt/pairs.ts";
+import * as $4 from "./routes/api/gpt/tokenize.ts";
+import * as $5 from "./routes/api/joke.ts";
+import * as $6 from "./routes/blog/[slug].tsx";
+import * as $7 from "./routes/blog/_middleware.ts";
+import * as $8 from "./routes/blog/index.tsx";
+import * as $9 from "./routes/index.tsx";
 import * as $$0 from "./islands/Button.tsx";
 import * as $$1 from "./islands/Counter.tsx";
 import * as $$2 from "./islands/Input.tsx";
@@ -19,11 +22,14 @@ const manifest = {
   routes: {
     "./routes/_404.tsx": $0,
     "./routes/_app.tsx": $1,
-    "./routes/api/joke.ts": $2,
-    "./routes/blog/[slug].tsx": $3,
-    "./routes/blog/_middleware.ts": $4,
-    "./routes/blog/index.tsx": $5,
-    "./routes/index.tsx": $6,
+    "./routes/api/gpt/decode.ts": $2,
+    "./routes/api/gpt/pairs.ts": $3,
+    "./routes/api/gpt/tokenize.ts": $4,
+    "./routes/api/joke.ts": $5,
+    "./routes/blog/[slug].tsx": $6,
+    "./routes/blog/_middleware.ts": $7,
+    "./routes/blog/index.tsx": $8,
+    "./routes/index.tsx": $9,
   },
   islands: {
     "./islands/Button.tsx": $$0,

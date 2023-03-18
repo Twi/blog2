@@ -188,5 +188,16 @@
     "https://esm.sh/v111/preact@10.11.0/src/index.d.ts": "1a5c331227be54be6515b0c92a469d352834fa413963ae84a39a05a3177111f6",
     "https://esm.sh/v111/preact@10.11.0/src/jsx.d.ts": "c423715fd7992b2e1446fea11d2d04e8adbd66c1edca1ce5e85f90e0d26a2eb2",
     "https://esm.sh/v111/style-vendorizer@2.2.3/deno/style-vendorizer.js": "4823723c1cd5b34a60b4a1dfdf272a821d367fc472c23aeed6c3bcd7af5b7a7b"
+  },
+  "npm": {
+    "specifiers": {
+      "gpt-3-encoder": "gpt-3-encoder@1.1.4"
+    },
+    "packages": {
+      "gpt-3-encoder@1.1.4": {
+        "integrity": "sha512-fSQRePV+HUAhCn7+7HL7lNIXNm6eaFWFbNLOOGtmSJ0qJycyQvj60OvRlH7mee8xAMjBDNRdMXlMwjAbMTDjkg==",
+        "dependencies": {}
+      }
+    }
   }
 }

@@ -1,5 +1,6 @@
 import { extract } from "std/encoding/front_matter/any.ts";
 import TTL from "$ttl";
+import { encode } from "npm:gpt-3-encoder";
 
 export interface Post {
   slug: string;
@@ -8,6 +9,7 @@ export interface Post {
   content: string;
   image?: string;
   desc?: string;
+  lengthTokens: number;
 }
 
 const ttl = new TTL<Post>(
@@ -47,6 +49,7 @@ export async function loadPost(slug: string): Promise<Post | null> {
     date,
     content: body,
     image: params.image,
+    lengthTokens: encode(body).length,
   };
   ttl.set(slug, result);
   return result;
