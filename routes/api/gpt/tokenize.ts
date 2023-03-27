@@ -1,5 +1,5 @@
 import { HandlerContext } from "$fresh/server.ts";
-import { encode } from "npm:gpt-3-encoder";
+import { encode } from "npm:gpt-3-encoder@1.1.4";
 
 export const handler = async (
   req: Request,
