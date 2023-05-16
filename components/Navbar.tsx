@@ -4,9 +4,10 @@ import { author, site } from "@/data/site.ts";
 export interface NavbarLinkProps {
   title: string;
   target?: string; // if undefined, disable
+  relme?: bool;
 }
 
-export const NavbarLink = ({ title, target }: NavbarLinkProps) => {
+export const NavbarLink = ({ title, target, relme }: NavbarLinkProps) => {
   return (
     <>
       <li class="mx-2">
@@ -15,6 +16,7 @@ export const NavbarLink = ({ title, target }: NavbarLinkProps) => {
             <a
               class="text-blue-400 transition duration-150 ease-in-out hover:text-blue-600 focus:text-blue-600 active:text-blue-700 dark:text-blue-200 dark:hover:text-blue-400 dark:focus:text-blue-500 dark:active:text-blue-500"
               href={target}
+              rel={relme ? "me" : undefined}
             >
               {title}
             </a>
@@ -46,7 +48,7 @@ export const Navbar = ({ children }: NavbarProps) => {
         <ul class="flex">
           <>{children}</>
           <span class="m-auto"></span>
-          <NavbarLink title="Fediverse" target={author.mastodon.link} />
+          <NavbarLink title="Fediverse" relme target={author.mastodon.link} />
           <NavbarLink title="Email" target={"mailto:" + author.email} />
         </ul>
       </nav>
