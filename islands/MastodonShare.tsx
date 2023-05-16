@@ -35,7 +35,7 @@ export default function MastodonShare({ title }: MastodonShareProps) {
 
 ${u()}
 
-${author.mastodon}`;
+${author.mastodon.mention}`;
 
             const mastodonURL = u(serverURL + "/share", {
               text,

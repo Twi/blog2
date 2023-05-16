@@ -7,6 +7,10 @@ export const site = {
 };
 
 export const author = {
-  mastodon: "@twi@tech.lgbt",
-  email: "twipony.ts@gmail.com",
+  mastodon: {
+    mention: "@twi@tech.lgbt",
+    link: "https://tech.lgbt/@twi",
+  },
+  email: "twilight@friendshipcastle.zip",
+  atprotoDID: "did:plc:g2ag3sguurbal7k6irnujf64",
 };

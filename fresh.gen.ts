@@ -13,6 +13,7 @@ import * as $6 from "./routes/blog/[slug].tsx";
 import * as $7 from "./routes/blog/_middleware.ts";
 import * as $8 from "./routes/blog/index.tsx";
 import * as $9 from "./routes/index.tsx";
+import * as $10 from "./routes/xrpc/com.atproto.identity.resolveHandle.ts";
 import * as $$0 from "./islands/Button.tsx";
 import * as $$1 from "./islands/Counter.tsx";
 import * as $$2 from "./islands/Input.tsx";
@@ -30,6 +31,7 @@ const manifest = {
     "./routes/blog/_middleware.ts": $7,
     "./routes/blog/index.tsx": $8,
     "./routes/index.tsx": $9,
+    "./routes/xrpc/com.atproto.identity.resolveHandle.ts": $10,
   },
   islands: {
     "./islands/Button.tsx": $$0,

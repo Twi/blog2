@@ -1,4 +1,5 @@
 import { ComponentChildren } from "preact";
+import { author, site } from "@/data/site.ts";
 
 export interface NavbarLinkProps {
   title: string;
@@ -45,8 +46,8 @@ export const Navbar = ({ children }: NavbarProps) => {
         <ul class="flex">
           <>{children}</>
           <span class="m-auto"></span>
-          <NavbarLink title="Fediverse" target="https://tech.lgbt/@twi" />
-          <NavbarLink title="Email" target="mailto:twipony.ts@gmail.com" />
+          <NavbarLink title="Fediverse" target={author.mastodon.link} />
+          <NavbarLink title="Email" target={"mailto:" + author.email} />
         </ul>
       </nav>
     </>
