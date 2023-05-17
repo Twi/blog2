@@ -21,8 +21,8 @@ destination="/home/deno/.cache"
   protocol = "tcp"
   script_checks = []
   [services.concurrency]
-    hard_limit = 25
-    soft_limit = 20
+    hard_limit = 5000
+    soft_limit = 4500
     type = "connections"
 
   [[services.ports]]
