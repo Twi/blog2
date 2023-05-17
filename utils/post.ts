@@ -16,13 +16,6 @@ const ttl = new TTL<Post>(
   Deno.env.get("NODE_ENV") == "production" ? 10_000_000 : 10_000,
 );
 
-ttl.addEventListener("set", ({ key }: { key: string }) => {
-  console.log(`[cache] set ${key}`);
-});
-ttl.addEventListener("expired", ({ key }: { key: string }) => {
-  console.log(`[cache] expired ${key}`);
-});
-
 export async function loadPost(slug: string): Promise<Post | null> {
   if (ttl.has(slug)) {
     const post = ttl.get(slug);

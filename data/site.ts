@@ -12,5 +12,8 @@ export const author = {
     link: "https://tech.lgbt/@twi",
   },
   email: "twilight@friendshipcastle.zip",
-  atprotoDID: "did:plc:g2ag3sguurbal7k6irnujf64",
+  atproto: {
+    url: "https://staging.bsky.app/profile/friendshipcastle.zip",
+    did: "did:plc:g2ag3sguurbal7k6irnujf64",
+  },
 };

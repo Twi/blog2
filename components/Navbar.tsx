@@ -44,8 +44,13 @@ export interface NavbarProps {
 export const Navbar = ({ children }: NavbarProps) => {
   return (
     <>
-      <nav class="w-full rounded-md bg-gray-100 px-2 py-2 dark:bg-gray-600 mb-4">
+      <nav class="w-full h-full rounded-md bg-gray-100 px-2 py-2 dark:bg-gray-600 mb-4">
         <ul class="flex">
+          <img
+            class="w-6 h-6 rounded-full"
+            src="/images/avatar.jpg"
+            alt="Twi's avatar"
+          />
           <>{children}</>
           <span class="m-auto"></span>
           <NavbarLink title="Fediverse" relme target={author.mastodon.link} />
