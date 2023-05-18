@@ -43,6 +43,7 @@ export const handler: Handlers = {
     let rss = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
+<link>https://friendshipcastle.zip</link>
 <title>${site.title}</title>
 <description>${site.description}</description>
 <generator>blog2 https://github.com/Twi/blog2</generator>

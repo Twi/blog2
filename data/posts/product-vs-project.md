@@ -64,7 +64,7 @@ into your needs, while a product can easily be adopted without any
 work at all being required. Running a Mastodon server for a community
 is a project, but Twitter as a product is there and you can create an
 account in less than an hour. Unless you really know what you are
-doing, it's inconcieveable that some random person could really figure
+doing, it's inconceiveable that some random person could really figure
 out all the technology and maintenance schedules needed to set up a
 Mastodon server.
 
@@ -73,7 +73,7 @@ that Twitter never will. This is core to the Mastodon project, but
 never will be relevant to the Twitter product.
 
 Fun fact: this is the same basic friction as the "protocols vs
-platforms" stick that people were on about a while ago. Protocols
+platforms" schtick that people were on about a while ago. Protocols
 require work to adapt them to existing molds. Platforms and products
 that let you build things on top of them. Compare IRC and Discord.
 IRC is a protocol that's been around about as long as I've been alive,
@@ -115,10 +115,11 @@ And finally, why should you have to set up a server, learn what Docker
 is, understand what a postgres is, and all of the errata with DNS,
 Let's Encrypt, or uptime is when you can outsource that to Twitter.
 
-I guess the real consequence of that is that the floor can and will
-fall out from under you in a moment's notice. Skype went to shit
-without much warning. Twitter did too. Discord will next. It's not a
-matter of if, but when with these products.
+I guess the real consequence of relying on these commercial platforms
+is that the floor can and will fall out from under you in a moment's
+notice. Skype went to shit without much warning. Twitter did too.
+Discord will next. It's not a matter of if, but when with these
+products.
 
 ## Edge cases
 
@@ -212,7 +213,7 @@ projects, but at some level they are a completely different thing.
 
 I don't know if Mastodon can really become a product because of how
 diverse the community is. There's not really one common tie that binds
-everyone together, there's a lot of smaller communities that all
+everyone together, there are a lot of smaller communities that all
 interoperate.
 
 In terms of mastodon.social, that may be able to become a product with
@@ -220,7 +221,7 @@ one of the projects powering it being the Mastodon codebase, but
 Mastodon itself probably is never going to be a product.
 
 At least in the fediverse nazi punks get blocked quickly and people
-crowdsource warning other instances about them. From emperical
+crowdsource warning other instances about them. From empirical
 evidence, it's taken several days of consecutive outrage on Bluesky to
 get notable transphobes banned.
 
