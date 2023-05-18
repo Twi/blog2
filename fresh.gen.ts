@@ -9,12 +9,13 @@ import * as $2 from "./routes/api/gpt/decode.ts";
 import * as $3 from "./routes/api/gpt/pairs.ts";
 import * as $4 from "./routes/api/gpt/tokenize.ts";
 import * as $5 from "./routes/api/joke.ts";
-import * as $6 from "./routes/blog/[slug].tsx";
-import * as $7 from "./routes/blog/_middleware.ts";
-import * as $8 from "./routes/blog/index.tsx";
-import * as $9 from "./routes/index.tsx";
-import * as $10 from "./routes/sitemap.xml.ts";
-import * as $11 from "./routes/xrpc/com.atproto.identity.resolveHandle.ts";
+import * as $6 from "./routes/blog.rss.ts";
+import * as $7 from "./routes/blog/[slug].tsx";
+import * as $8 from "./routes/blog/_middleware.ts";
+import * as $9 from "./routes/blog/index.tsx";
+import * as $10 from "./routes/index.tsx";
+import * as $11 from "./routes/sitemap.xml.ts";
+import * as $12 from "./routes/xrpc/com.atproto.identity.resolveHandle.ts";
 import * as $$0 from "./islands/Button.tsx";
 import * as $$1 from "./islands/Counter.tsx";
 import * as $$2 from "./islands/Input.tsx";
@@ -28,12 +29,13 @@ const manifest = {
     "./routes/api/gpt/pairs.ts": $3,
     "./routes/api/gpt/tokenize.ts": $4,
     "./routes/api/joke.ts": $5,
-    "./routes/blog/[slug].tsx": $6,
-    "./routes/blog/_middleware.ts": $7,
-    "./routes/blog/index.tsx": $8,
-    "./routes/index.tsx": $9,
-    "./routes/sitemap.xml.ts": $10,
-    "./routes/xrpc/com.atproto.identity.resolveHandle.ts": $11,
+    "./routes/blog.rss.ts": $6,
+    "./routes/blog/[slug].tsx": $7,
+    "./routes/blog/_middleware.ts": $8,
+    "./routes/blog/index.tsx": $9,
+    "./routes/index.tsx": $10,
+    "./routes/sitemap.xml.ts": $11,
+    "./routes/xrpc/com.atproto.identity.resolveHandle.ts": $12,
   },
   islands: {
     "./islands/Button.tsx": $$0,
