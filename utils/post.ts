@@ -1,6 +1,6 @@
 import { extract } from "std/encoding/front_matter/any.ts";
 import TTL from "$ttl";
-import { encode } from "npm:gpt-3-encoder";
+import { readingTime } from "@reading-time-estimator";
 
 export interface Post {
   slug: string;
@@ -9,7 +9,8 @@ export interface Post {
   content: string;
   image?: string;
   desc?: string;
-  lengthTokens: number;
+  readLength: string;
+  wordCount: number;
 }
 
 const ttl = new TTL<Post>(
@@ -36,13 +37,15 @@ export async function loadPost(slug: string): Promise<Post | null> {
   const { attrs, body } = extract(text);
   const params = attrs as Record<string, string>;
   const date = new Date(params.date);
+  const rt = readingTime(body);
   const result = {
     slug,
     title: params.title,
     date,
     content: body,
     image: params.image,
-    lengthTokens: encode(body).length,
+    readingTime: rt.text,
+    wordCount: rt.words,
   };
   ttl.set(slug, result);
   return result;

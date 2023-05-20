@@ -47,7 +47,7 @@ export default function BlogViewPage(props: PageProps) {
           <div className="prose prose-slate dark:prose-invert prose-img:rounded-xl">
             <small>
               Published on {post.date.toLocaleDateString("en-US")} -{" "}
-              {post.lengthTokens} tokens
+              {post.readingTime} ({post.wordCount} words)
             </small>
             <span
               dangerouslySetInnerHTML={{ __html: render(post.content) }}
