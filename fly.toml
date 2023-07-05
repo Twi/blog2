@@ -1,25 +1,17 @@
-# fly.toml file generated for twilightsparkle on 2023-03-06T20:20:21-05:00
+# fly.toml file generated for twilightsparkle on 2023-07-05T06:52:37-04:00
 
 app = "twilightsparkle"
+
 kill_signal = "SIGINT"
 kill_timeout = 5
+mounts = []
 processes = []
 
-[mounts]
-source="fresh_data"
-destination="/home/deno/.cache"
-
-[env]
-
-[experimental]
-  auto_rollback = true
-
 [[services]]
-  http_checks = []
-  internal_port = 8000
+  internal_port = 8080
   processes = ["app"]
   protocol = "tcp"
-  script_checks = []
+
   [services.concurrency]
     hard_limit = 5000
     soft_limit = 4500
@@ -33,9 +25,3 @@ destination="/home/deno/.cache"
   [[services.ports]]
     handlers = ["tls", "http"]
     port = 443
-
-  [[services.tcp_checks]]
-    grace_period = "1s"
-    interval = "15s"
-    restart_limit = 0
-    timeout = "2s"
