@@ -1,5 +1,5 @@
 import { Handlers } from "$fresh/server.ts";
-import { author, site } from "@/data/site.ts";
+import { site } from "@/data/site.ts";
 import { listPosts } from "@/utils/post.ts";
 
 function formatDateToRFC2822(date) {
