@@ -1,9 +1,12 @@
-FROM denoland/deno:1.35.0
+FROM denoland/deno:1.35.3
 
 # The port that your application listens to.
 EXPOSE 8000
 
 WORKDIR /app
+
+ARG GIT_REVISION
+ENV DENO_DEPLOYMENT_ID=${GIT_REVISION}
 
 USER deno
 

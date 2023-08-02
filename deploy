@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -ex
+
+rev=$(git rev-parse HEAD)
+
+~/.fly/bin/fly deploy --build-arg GIT_REVISION="${rev}"
