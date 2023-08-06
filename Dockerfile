@@ -14,4 +14,4 @@ COPY . .
 RUN deno cache --reload main.ts
 ENV NODE_ENV=production
 
-CMD ["run", "--allow-all", "main.ts"]
+CMD ["run", "--unstable", "--allow-all", "main.ts"]
