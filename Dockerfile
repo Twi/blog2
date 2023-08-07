@@ -13,5 +13,6 @@ USER deno
 COPY . .
 RUN deno cache --reload main.ts
 ENV NODE_ENV=production
+ENV HOME=/deno-dir/location_data/.home
 
 CMD ["run", "--unstable", "--allow-all", "main.ts"]
