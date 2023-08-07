@@ -6,20 +6,41 @@ import { Navbar, NavbarCrumb, NavbarLink } from "@/components/Navbar.tsx";
 import MastodonShare from "@/islands/MastodonShare.tsx";
 import Header from "@/components/Header.tsx";
 import render from "@/utils/markdown.ts";
+import { User } from "@/routes/_middleware.tsx";
+import { getSessionId } from "https://deno.land/x/deno_kv_oauth@v0.2.4/mod.ts";
+import Comments from "@/islands/Comments.tsx";
+import { CommentsResponse, listCommentsWithUsers } from "@/utils/comment.ts";
+
+const kv = await Deno.openKv();
 
 interface Data {
   post: Post | null;
+  user: User | null;
+  comments: CommentsResponse | null;
 }
 
 export const handler: Handlers<Data> = {
-  async GET(_req, ctx) {
+  async GET(req, ctx) {
     const post = await loadPost(ctx.params.slug);
-    return ctx.render({ ...ctx.state, post });
+    let user: User | null = null;
+
+    const sessionID = await getSessionId(req);
+    if (sessionID) {
+      const userInfo = await kv.get<User>(["userInfo", sessionID]);
+      if (userInfo.value !== null) {
+        user = userInfo.value;
+      }
+    }
+
+    const comments = await listCommentsWithUsers(ctx.params.slug);
+
+    return ctx.render({ ...ctx.state, post, user, comments });
   },
 };
 
 export default function BlogViewPage(props: PageProps) {
-  const { post } = props.data;
+  const { post, user, comments } = props.data;
+  const { slug } = props.params;
 
   return post
     ? (
@@ -55,6 +76,7 @@ export default function BlogViewPage(props: PageProps) {
           </div>
         </article>
         <MastodonShare title={post.title} />
+        <Comments defaultComments={comments} slug={slug} user={user} />
       </>
     )
     : (

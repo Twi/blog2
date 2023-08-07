@@ -6,22 +6,24 @@ import * as $0 from "./routes/_404.tsx";
 import * as $1 from "./routes/_500.tsx";
 import * as $2 from "./routes/_app.tsx";
 import * as $3 from "./routes/_middleware.tsx";
-import * as $4 from "./routes/api/joke.ts";
-import * as $5 from "./routes/auth/callback.ts";
-import * as $6 from "./routes/auth/signin.ts";
-import * as $7 from "./routes/auth/signout.ts";
-import * as $8 from "./routes/auth/whoami.tsx";
-import * as $9 from "./routes/blog.rss.ts";
-import * as $10 from "./routes/blog/[slug].tsx";
-import * as $11 from "./routes/blog/_middleware.ts";
-import * as $12 from "./routes/blog/index.tsx";
-import * as $13 from "./routes/index.tsx";
-import * as $14 from "./routes/sitemap.xml.ts";
-import * as $15 from "./routes/xrpc/com.atproto.identity.resolveHandle.ts";
+import * as $4 from "./routes/api/comments/[slug].ts";
+import * as $5 from "./routes/api/joke.ts";
+import * as $6 from "./routes/auth/callback.ts";
+import * as $7 from "./routes/auth/signin.ts";
+import * as $8 from "./routes/auth/signout.ts";
+import * as $9 from "./routes/auth/whoami.tsx";
+import * as $10 from "./routes/blog.rss.ts";
+import * as $11 from "./routes/blog/[slug].tsx";
+import * as $12 from "./routes/blog/_middleware.ts";
+import * as $13 from "./routes/blog/index.tsx";
+import * as $14 from "./routes/index.tsx";
+import * as $15 from "./routes/sitemap.xml.ts";
+import * as $16 from "./routes/xrpc/com.atproto.identity.resolveHandle.ts";
 import * as $$0 from "./islands/Button.tsx";
-import * as $$1 from "./islands/Counter.tsx";
-import * as $$2 from "./islands/Input.tsx";
-import * as $$3 from "./islands/MastodonShare.tsx";
+import * as $$1 from "./islands/Comments.tsx";
+import * as $$2 from "./islands/Counter.tsx";
+import * as $$3 from "./islands/Input.tsx";
+import * as $$4 from "./islands/MastodonShare.tsx";
 
 const manifest = {
   routes: {
@@ -29,24 +31,26 @@ const manifest = {
     "./routes/_500.tsx": $1,
     "./routes/_app.tsx": $2,
     "./routes/_middleware.tsx": $3,
-    "./routes/api/joke.ts": $4,
-    "./routes/auth/callback.ts": $5,
-    "./routes/auth/signin.ts": $6,
-    "./routes/auth/signout.ts": $7,
-    "./routes/auth/whoami.tsx": $8,
-    "./routes/blog.rss.ts": $9,
-    "./routes/blog/[slug].tsx": $10,
-    "./routes/blog/_middleware.ts": $11,
-    "./routes/blog/index.tsx": $12,
-    "./routes/index.tsx": $13,
-    "./routes/sitemap.xml.ts": $14,
-    "./routes/xrpc/com.atproto.identity.resolveHandle.ts": $15,
+    "./routes/api/comments/[slug].ts": $4,
+    "./routes/api/joke.ts": $5,
+    "./routes/auth/callback.ts": $6,
+    "./routes/auth/signin.ts": $7,
+    "./routes/auth/signout.ts": $8,
+    "./routes/auth/whoami.tsx": $9,
+    "./routes/blog.rss.ts": $10,
+    "./routes/blog/[slug].tsx": $11,
+    "./routes/blog/_middleware.ts": $12,
+    "./routes/blog/index.tsx": $13,
+    "./routes/index.tsx": $14,
+    "./routes/sitemap.xml.ts": $15,
+    "./routes/xrpc/com.atproto.identity.resolveHandle.ts": $16,
   },
   islands: {
     "./islands/Button.tsx": $$0,
-    "./islands/Counter.tsx": $$1,
-    "./islands/Input.tsx": $$2,
-    "./islands/MastodonShare.tsx": $$3,
+    "./islands/Comments.tsx": $$1,
+    "./islands/Counter.tsx": $$2,
+    "./islands/Input.tsx": $$3,
+    "./islands/MastodonShare.tsx": $$4,
   },
   baseUrl: import.meta.url,
 };

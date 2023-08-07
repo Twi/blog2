@@ -7,8 +7,9 @@ import { oauth2Client } from "@/utils/oauth2_client.ts";
 
 const kv = await Deno.openKv();
 
-interface User {
+export interface User {
   login: string;
+  id: number;
   name: string;
   avatar_url: string;
 }
@@ -18,7 +19,9 @@ export interface State {
   accessToken: string | null;
 }
 
-const fetchGithubUserInfo = async (accessToken: string): Promise<User> => {
+export const fetchGithubUserInfo = async (
+  accessToken: string,
+): Promise<User> => {
   const resp = await fetch("https://api.github.com/user", {
     headers: {
       authorization: `bearer ${accessToken}`,
@@ -30,6 +33,8 @@ const fetchGithubUserInfo = async (accessToken: string): Promise<User> => {
     );
   }
   const user: User = await resp.json();
+  console.log(`fetched user info for ${user.login}`);
+  await kv.set(["github", "user", `${user.id}`], user);
   return user;
 };
 

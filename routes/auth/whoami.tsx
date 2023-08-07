@@ -4,43 +4,61 @@ import {
   getSessionId,
 } from "https://deno.land/x/deno_kv_oauth@v0.2.4/mod.ts";
 import { oauth2Client } from "@/utils/oauth2_client.ts";
+import { Navbar, NavbarLink } from "@/components/Navbar.tsx";
+import { fetchGithubUserInfo, State, User } from "@/routes/_middleware.tsx";
 
-interface User {
-  login: string;
-  name: string;
-  avatar_url: string;
-}
+const kv = await Deno.openKv();
 
 export const handler: Handlers<User | null> = {
   async GET(req, ctx) {
-    const sessionId = await getSessionId(req);
+    const sessionID = await getSessionId(req);
 
-    if (!sessionId) {
+    if (!sessionID) {
       return ctx.render(null);
     }
 
-    const accessToken = await getSessionAccessToken(oauth2Client, sessionId);
-    const response = await fetch("https://api.github.com/user", {
-      headers: {
-        authorization: `bearer ${accessToken}`,
-      },
-    });
-    const user: User = await response.json();
+    let user: User | null = null;
+
+    const accessToken = await getSessionAccessToken(oauth2Client, sessionID);
+
+    const userInfo = await kv.get<User>(["userInfo", sessionID]);
+    if (userInfo.value === null) {
+      user = await fetchGithubUserInfo(accessToken as string);
+      await kv.set(["userInfo", sessionID], user);
+    } else {
+      user = userInfo.value;
+    }
+
     return ctx.render(user);
   },
 };
 
 export default function Page({ data }: PageProps<User | null>) {
   if (!data) {
-    return <a href="/signin">Sign In</a>;
+    return (
+      <>
+        <Navbar>
+          <NavbarLink title="Home" target="/" />
+          <NavbarLink title="Blog" target="/blog" />
+        </Navbar>
+        <a href="/auth/signin">Sign In</a>
+      </>
+    );
   }
 
   return (
-    <div>
-      <img src={data.avatar_url} width={64} height={64} />
-      <h1>{data.name}</h1>
-      <p>{data.login}</p>
-      <a href="/signout">Sign Out</a>
-    </div>
+    <>
+      <Navbar>
+        <NavbarLink title="Home" target="/" />
+        <NavbarLink title="Blog" target="/blog" />
+      </Navbar>
+      <div class="max-w-sm">
+        <h1 class="text-xl font-extrabold">Hello {data.name}!</h1>
+        <img src={data.avatar_url} width={64} height={64} />
+        <p class="font-extrabold text-lg">@{data.login}</p>
+        <p>{data.login}</p>
+        <a href="/auth/signout">Sign Out</a>
+      </div>
+    </>
   );
 }

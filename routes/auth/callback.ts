@@ -5,7 +5,12 @@ import { oauth2Client } from "@/utils/oauth2_client.ts";
 export const handler: Handlers = {
   async GET(req) {
     // Return object also includes `accessToken` and `sessionId` properties.
-    const { response } = await handleCallback(req, oauth2Client, "/whoami");
+    const { response } = await handleCallback(
+      req,
+      oauth2Client,
+      "/auth/whoami",
+    );
+
     return response;
   },
 };

@@ -1,10 +1,10 @@
 import { ComponentChildren } from "preact";
-import { author, site } from "@/data/site.ts";
+import { author } from "@/data/site.ts";
 
 export interface NavbarLinkProps {
   title: string;
   target?: string; // if undefined, disable
-  relme?: bool;
+  relme?: boolean;
 }
 
 export const NavbarLink = ({ title, target, relme }: NavbarLinkProps) => {
