@@ -16,7 +16,7 @@
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.0",
     "std/": "https://deno.land/std@0.178.0/",
     "@reading-time-estimator": "https://esm.sh/v113/reading-time-estimator@1.8.1",
-    "$fresh/": "https://deno.land/x/fresh@1.5.2/",
+    "$fresh/": "https://deno.land/x/fresh@1.5.4/",
     "$icons/": "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/",
     "$ttl": "https://deno.land/x/ttl@1.0.1/mod.ts",
     "@twind/core": "https://esm.sh/v111/@twind/core@1.1.3",
