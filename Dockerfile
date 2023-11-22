@@ -8,10 +8,8 @@ WORKDIR /app
 ARG GIT_REVISION
 ENV DENO_DEPLOYMENT_ID=${GIT_REVISION}
 
-USER deno
-
 COPY . .
-RUN deno cache --reload main.ts
+RUN ls -la && deno task build
 ENV NODE_ENV=production
 ENV HOME=/deno-dir/location_data/.home
 

@@ -8,13 +8,9 @@ import "std/dotenv/load.ts";
 
 import { start } from "$fresh/server.ts";
 import manifest from "./fresh.gen.ts";
-
-import freshwind from "@freshwind";
-import config, { configURL } from "./twind.config.ts";
+import config from "./fresh.config.ts";
 
 import * as comrak from "@comrak";
 await comrak.init();
 
-await start(manifest, {
-  plugins: [freshwind(config, configURL)],
-});
+await start(manifest, config);

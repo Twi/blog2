@@ -2,8 +2,9 @@
   "tasks": {
     "start": "deno run --unstable -A --watch=static/,routes/ dev.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update .",
-    "build": "deno run -A dev.ts build",
-    "preview": "deno run -A main.ts"
+    "build": "deno run --unstable -A dev.ts build",
+    "preview": "deno run --unstable -A main.ts",
+    "deploy": "~/.fly/bin/fly deploy"
   },
   "lock": false,
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
