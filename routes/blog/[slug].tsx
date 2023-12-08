@@ -54,7 +54,7 @@ export default function BlogViewPage(props: PageProps) {
           <NavbarLink title={post.slug} />
         </Navbar>
         <article>
-          <div className="prose prose-slate dark:prose-invert prose-img:rounded-xl">
+          <div className="prose prose-slate dark:prose-invert prose-img:rounded-xl max-w-none">
             <h1>{post.title}</h1>
           </div>
           {post.image
@@ -65,10 +65,11 @@ export default function BlogViewPage(props: PageProps) {
               />
             )
             : <></>}
-          <div className="prose prose-slate dark:prose-invert prose-img:rounded-xl">
+          <div className="prose prose-slate dark:prose-invert prose-img:rounded-xl max-w-none">
             <small>
               Published on {post.date.toLocaleDateString("en-US")} -{" "}
-              {post.readingTime} ({post.wordCount} words)
+              {post.readingTime} ({post.wordCount} words, {post.tokenCount}{" "}
+              tokens)
             </small>
             <span
               dangerouslySetInnerHTML={{ __html: render(post.content) }}
