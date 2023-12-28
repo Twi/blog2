@@ -1,7 +1,7 @@
 ---
 title: "Llama Guard leaves things to be desired"
 date: 2023-12-08
-desc: "Or: it won't filter how to make a pipe bomb"
+summary: "Or: it won't filter how to make a pipe bomb"
 image: /images/llamaguard.webp
 ---
 

@@ -9,7 +9,7 @@ export interface HeaderProps {
 
 export default function Header(props: HeaderProps) {
   const title = props.title ? props.title : site.title;
-  const desc = props.description ? props.description : site.description;
+  const desc = props.summary ? props.summary : site.description;
   const image = props.image ? props.image : site.ogImage;
   return (
     <Head>
@@ -32,6 +32,9 @@ export default function Header(props: HeaderProps) {
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={desc} />
       <meta property="twitter:image" content={image} />
+
+      {/* RSS feed */}
+      <link rel="alternate" type="application/rss+xml" href="/blog.rss" />
     </Head>
   );
 }

@@ -1,6 +1,6 @@
 ---
 title: Making Go telemetry opt-in is a mistake
-desc: A hot take.
+summary: A hot take about how opt-in telemetry doesn't get the information you actually want.
 date: 2023-02-25
 image: /images/librarian.jpg
 ---

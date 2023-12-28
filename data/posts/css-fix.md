@@ -1,7 +1,7 @@
 ---
 title: The light mode CSS was fixed
 date: 2023-02-26
-desc: oops lol
+summary: oops lol
 ---
 
 I am a creature of darkness and I didn't realize how shit the light

@@ -1,6 +1,6 @@
 ---
 title: GitHub warns you that your pronouns may be illegal
-desc: How opsec warnings go bad
+summary: Or how opsec warnings go bad.
 date: 2023-03-02
 image: /images/gender-crimes.jpg
 ---

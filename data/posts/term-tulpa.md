@@ -1,7 +1,7 @@
 ---
 title: "On the term 'tulpa'"
 date: 2023-07-22
-desc: Why words are terrible, but we need to use them anyways.
+summary: Why words are terrible, but we need to use them anyways.
 image: /images/babel.jpg
 ---
 

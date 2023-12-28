@@ -1,6 +1,6 @@
 ---
 title: "Blog: The Second"
-desc: What I learned about friendship, I mean Hakyll
+summary: What I learned about friendship, I mean Hakyll
 date: 2023-03-06
 image: /images/apple-acres.jpg
 ---

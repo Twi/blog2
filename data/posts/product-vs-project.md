@@ -1,6 +1,6 @@
 ---
 title: "People want products, not projects"
-desc: "Or: why platforms win out over protocols"
+summary: "Or: why platforms win out over protocols"
 date: 2023-05-17
 image: /images/iphone-monolith.jpg
 ---
